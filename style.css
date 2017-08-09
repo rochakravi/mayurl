@@ -1,0 +1,14 @@
+/* Styles go here */
+
+.clo{
+  background-color : red;
+  color : white;
+}
+
+.prd{
+  background-color : lightblue;
+  color : white;
+}
+.sect{
+  background : grey;
+}

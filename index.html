@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+  <head>
+    
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learning</title>
+    <link data-require="bootstrap@3.0.0" data-semver="3.0.0" rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+    
+    <script data-require="angular.js@1.4.8" data-semver="1.4.8" src="https://code.angularjs.org/1.4.8/angular.js"></script>
+    <!--<link rel="stylesheet" href="public/style.css" /> -->
+    
+    
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    
+    
+    <script src="script.js"></script>
+    <script>
+  $( function() {
+    $( "#accordion" ).accordion();
+  } );
+  </script>
+    
+  </head>
+
+  <body ng-controller="myCtrl" ng-init="myVar = false"> 
+
+
+
+
+
+    <div class="container-fluid">
+      <h1 class='jumbotron'>{{msg}}</h1>
+
+      
+
+      <div ng-repeat="jdata in jsonDataFinal" >
+
+        {{msg2}}
+        
+      abcd
+
+      </div>
+
+
+      <ul class="list-group">
+        <li class="list-group-item clo">Products</li>
+        <div class='row'>
+          <div class='col-sm-4'>
+             <li ng-repeat="prod in products" class="list-group-item prd" ng-click="showDetails($index)">
+          
+                {{prod}}
+                
+              </li>
+          </div>
+          <div class='col-sm-8 sect'>
+            <div ng-if="myVar">
+              hello ng-if
+            </div>
+          </div>
+        </div>
+       
+      </ul>
+
+     
+      
+      <!--accordian-->
+    
+      <div id="accordion">
+  <h3>{{msg2}}</h3>
+  <div>
+    <p>
+    Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+    ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+    amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+    odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+    </p>
+  </div>
+  <h3>Section 2</h3>
+  <div>
+    <p>
+    Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+    purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+    velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+    suscipit faucibus urna.
+    </p>
+  </div>
+  <h3>Section 3</h3>
+  <div>
+    <p>
+    Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+    Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+    ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
+    lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
+    </p>
+    <ul>
+      <li>List item one</li>
+      <li>List item two</li>
+      <li>List item three</li>
+    </ul>
+  </div>
+  <h3>Section 4</h3>
+  <div>
+    <p>
+    Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+    et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+    faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+    mauris vel est.
+    </p>
+    <p>
+    Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+    inceptos himenaeos.
+    </p>
+  </div>
+</div>
+      
+    </div>
+  </body>
+
+</html>
